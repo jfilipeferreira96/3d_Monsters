@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import { Text, useCursor } from "@react-three/drei";
 
-function BackButton({color, onClick}) {
+function BackButton({ color, onClick, positionProps }) {
   const [hovered, setHovered] = useState(false);
 
   useCursor(hovered);
-  
+
   return (
     <Text
       font="fonts/Caprasimo-Regular.ttf"
       fontSize={0.2}
-      position={[-1.5, 1, 0]}
+      position={positionProps ?? [-1.5, 1, 0]}
       anchorX="left"
       anchorY="top"
       color={color}
@@ -19,8 +19,8 @@ function BackButton({color, onClick}) {
       onPointerOut={() => setHovered(false)}
     >
       Go back
-    </Text> 
-  )
+    </Text>
+  );
 }
 
-export default BackButton
+export default BackButton;
