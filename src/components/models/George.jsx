@@ -12,7 +12,7 @@ export function George({ hovered, ...props }) {
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    const anim = hovered ? "Kick" : "Hello";
+    const anim = hovered ? "Hello" : "Idle";
     actions[anim].reset().fadeIn(0.5).play();
     return () => actions[anim].fadeOut(0.5);
   }, [hovered]);

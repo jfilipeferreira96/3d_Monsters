@@ -12,7 +12,7 @@ export function Stan({ hovered, ...props }) {
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    const anim = hovered ? "Punch" : "Dance";
+    const anim = hovered ? "Dance" : "Idle";
     actions[anim].reset().fadeIn(0.5).play();
     return () => actions[anim].fadeOut(0.5);
   }, [hovered]);

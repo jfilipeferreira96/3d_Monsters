@@ -3,8 +3,8 @@ import { useThree } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { MonsterCard } from "./MonsterCard";
-import { Cactoro } from "./models/Cactoro";
-import { DragonEvolved } from "./models/Dragon_Evolved";
+import { Orc } from "./models/Orc";
+import { Tribal } from "./models/Tribal";
 import { Fish } from "./models/Fish";
 
 export const MonsterStage = () => {
@@ -40,8 +40,8 @@ export const MonsterStage = () => {
 
       <MonsterCard
         texture={"textures/anime_art_style_lava_world.jpg"}
-        name="Dragon"
-        color={"#df8d52"}
+        name="Tribal"
+        color={"#C25149"}
         position={[-2.5, 0, 0]}
         rotation={[0, Math.PI / 8, 0]}
         active={active}
@@ -49,12 +49,12 @@ export const MonsterStage = () => {
         hovered={hovered}
         setHovered={setHovered}
       >
-        <DragonEvolved scale={0.5} position={[0, -1, 0]} hovered={hovered === "Dragon"} />
+        <Tribal scale={0.5} position={[0, -1, 0]} hovered={hovered === "Tribal"} />
       </MonsterCard>
 
       <MonsterCard
-        name="Cactoro"
-        color="#739d3c"
+        name="Orc"
+        color="#509F5D"
         texture={"textures/anime_art_style_cactus_forest.jpg"}
         position={[2.5, 0, 0]}
         rotation={[0, -Math.PI / 8, 0]}
@@ -63,7 +63,7 @@ export const MonsterStage = () => {
         hovered={hovered}
         setHovered={setHovered}
       >
-        <Cactoro scale={0.45} position={[0, -1, 0]} hovered={hovered === "Cactoro"} />
+        <Orc scale={0.55} position={[0, -1, 0]} hovered={hovered === "Orc"} />
       </MonsterCard>
     </>
   );
